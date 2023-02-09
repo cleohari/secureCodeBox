@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM python:3.10.2-alpine
+FROM python:3.12.0a5-alpine
 COPY . /zap-client/
 RUN pip3 install -r /zap-client/requirements.txt
 RUN addgroup --system --gid 1001 zap-client && adduser zap-client --system --uid 1001 --ingroup zap-client

@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM alpine:3.11
+FROM alpine:3.16
 
 RUN apk add --no-cache curl bash
 

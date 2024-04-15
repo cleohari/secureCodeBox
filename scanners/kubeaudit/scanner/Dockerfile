@@ -17,7 +17,7 @@ RUN git clone --depth 1 --branch v$scannerVersion https://github.com/Shopify/kub
  && go build -a -ldflags '-w -s -extldflags "-static"' -o /go/bin/kubeaudit ./cmd/ \
  && chmod +x /go/bin/kubeaudit
 
-FROM alpine:3.12
+FROM alpine:3.16.9
 COPY --from=builder /go/bin/kubeaudit /kubeaudit
 COPY wrapper.sh /wrapper.sh
 RUN addgroup --system --gid 1001 kubeaudit && adduser kubeaudit --system --uid 1001 --ingroup kubeaudit

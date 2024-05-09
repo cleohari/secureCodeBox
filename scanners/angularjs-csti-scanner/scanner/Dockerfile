@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM python:3.6-alpine
+FROM python:3.13.0b1-alpine
 ARG scannerVersion
 
 RUN apk add --update --no-cache g++ gcc libxslt-dev 

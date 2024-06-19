@@ -5,3 +5,4 @@
 python-owasp-zap-v2.4==0.0.20
 HiYaPyCo==0.4.16
 MarkupSafe==2.0.1
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
